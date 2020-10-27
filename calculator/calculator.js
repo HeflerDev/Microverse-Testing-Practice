@@ -1,10 +1,8 @@
-const calculator = () => {
-    return {
-        'add': '+',
-        'sub': '-',
-        'mult': '*',
-        'div': '/'
-    }
-};
+const calculator = () => ({
+  add: '+',
+  sub: '-',
+  mult: '*',
+  div: '/',
+});
 
 module.exports = calculator;
