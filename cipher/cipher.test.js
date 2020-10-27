@@ -7,8 +7,8 @@ test("validate", () => {
     expect(cipher(8, "This is a string")).toBe("bpqa qa i abzqvo");
     expect(cipher(13, "Original Cipher")).toBe("bevtvany pvcure");
     expect(cipher(25, "Max Value")).toBe("lzw uzktd");
-    expect(cipher(26, "Invalid Call")).toThrow("Shift number must not be > than 25");
-    expect(cipher(-1, "Invalid Call")).toThrow("Shift number must be >= 0");
+    expect(() => cipher(26, "Invalid Call")).toThrow(Error);
+    expect(() => cipher(-1, "Invalid Call")).toThrow(Error);
 });
 
 test("edge cases", () => {
